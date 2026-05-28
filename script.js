@@ -190,17 +190,22 @@ document.addEventListener('DOMContentLoaded', () => {
       repeat: -1,
     });
 
-    /* ─── SUBTLE PARALLAX MOUSE ─── */
+    /* ─── PARALLAX MOUSE MOVEMENT ─── */
     const heroSection = document.getElementById('hero');
-    const heroContent = document.querySelector('.hero-content');
-    if (heroSection && heroContent) {
+    const heroTopRow = document.querySelector('.hero-top-row');
+    if (heroSection && heroTopRow) {
       heroSection.addEventListener('mousemove', (e) => {
-        const x = (e.clientX / window.innerWidth  - 0.5) * -8;  /* ±4px max */
-        const y = (e.clientY / window.innerHeight - 0.5) * -6;  /* ±3px max */
-        gsap.to(heroContent, { x, y, duration: 1.2, ease: 'power2.out' });
+        const x = (window.innerWidth / 2 - e.pageX) / 60;
+        const y = (window.innerHeight / 2 - e.pageY) / 60;
+        gsap.to(heroTopRow, {
+          x: x,
+          y: y,
+          duration: 0.6,
+          ease: 'power2.out'
+        });
       });
       heroSection.addEventListener('mouseleave', () => {
-        gsap.to(heroContent, { x: 0, y: 0, duration: 1.4, ease: 'power2.out' });
+        gsap.to(heroTopRow, { x: 0, y: 0, duration: 0.8, ease: 'power2.out' });
       });
     }
 
@@ -310,47 +315,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ─── TYPEWRITER EFFECT ───
-     "خبراء في" is STATIC in HTML — ONLY the word inside #typewriter changes.
-     #typewriter has a fixed CSS width so the layout never shifts.
-  */
+  /* ─── TYPEWRITER EFFECT ─── */
   const typeEl = document.getElementById('typewriter');
   if (typeEl) {
     const words = ['الأنظمة الأمنية', 'شبكات المؤسسات', 'المنازل الذكية', 'التحول الرقمي'];
-    let wi = 0;         /* word index */
-    let ci = 0;         /* char index */
-    let deleting = false;
-    let timer;
+    let wi = 0, ci = 0, deleting = false;
 
-    function tick() {
+    function type() {
       const word = words[wi];
-
-      if (!deleting) {
-        ci++;
-        typeEl.innerHTML = word.slice(0, ci) + '<span class="cursor"></span>';
-        if (ci === word.length) {
-          /* finished typing — pause then start deleting */
-          deleting = true;
-          timer = setTimeout(tick, 2200);
-          return;
-        }
-        timer = setTimeout(tick, 80);
+      const currentText = word.slice(0, deleting ? --ci : ++ci);
+      typeEl.innerHTML = currentText + '<span class="cursor"></span>';
+      
+      if (!deleting && ci === word.length) {
+        deleting = true;
+        setTimeout(type, 2000);
+      } else if (deleting && ci === 0) {
+        deleting = false;
+        wi = (wi + 1) % words.length;
+        setTimeout(type, 500);
       } else {
-        ci--;
-        typeEl.innerHTML = (ci > 0 ? word.slice(0, ci) : '') + '<span class="cursor"></span>';
-        if (ci === 0) {
-          /* finished deleting — short pause, advance word */
-          deleting = false;
-          wi = (wi + 1) % words.length;
-          timer = setTimeout(tick, 450);
-          return;
-        }
-        timer = setTimeout(tick, 45);
+        setTimeout(type, deleting ? 45 : 75);
       }
     }
-
-    /* start after entrance animations settle */
-    setTimeout(tick, 1400);
+    setTimeout(type, 1000);
   }
 
 });
