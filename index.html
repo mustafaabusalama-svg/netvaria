@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نتفارية سيستم | رؤية أكثر دقة، وأمان بلا حدود</title>
+<meta name="description" content="نتفارية سيستم — الشريك التقني الأول في المملكة العربية السعودية لأنظمة الأمن، الشبكات، والتحول الرقمي.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- AOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<!-- Styles -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══ ANNOUNCEMENT STRIP ═══ -->
+<div class="announcement-strip">
+  <div class="strip-inner">
+    <span class="strip-badge">🔥 عرض محدود</span>
+    <span>خصم يصل إلى 25% على المنتجات والتركيب</span>
+    <a href="https://netvaria.com/" target="_blank" class="strip-btn">تصفح المنتجات ←</a>
+  </div>
+</div>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <!-- Logo -->
+    <a class="nav-logo" href="#hero" data-scroll="hero">
+      <img
+        src="netvaria-navbar-logo-transparent-trimmed.png"
+        alt="نتفارية سيستم"
+        onerror="this.style.display='none'; this.parentElement.insertAdjacentHTML('beforeend','<span style=\'font-family:Poppins;font-size:17px;font-weight:800;color:#fff;letter-spacing:-0.5px\'>Netvaria <span style=color:#00c853>System</span></span>')"
+      >
+    </a>
+
+    <!-- Center Links -->
+    <div class="nav-links">
+      <a href="#hero" data-scroll="hero" data-section="hero">الرئيسية</a>
+      <a href="#section-services" data-scroll="section-services" data-section="section-services">الخدمات</a>
+      <a href="#section-vision" data-scroll="section-vision" data-section="section-vision">من نحن</a>
+      <a href="#section-clients" data-scroll="section-clients" data-section="section-clients">عملاؤنا</a>
+      <a href="#section-cta" data-scroll="section-cta" data-section="section-cta">الدعم</a>
+    </div>
+
+    <!-- CTA -->
+    <div class="nav-cta-wrap">
+      <a href="#section-cta" class="nav-cta" data-scroll="section-cta">
+        اتصل بنا
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="القائمة">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#hero" data-scroll="hero">🏠 الرئيسية</a>
+  <a href="#section-services" data-scroll="section-services">⚙️ الخدمات</a>
+  <a href="#section-vision" data-scroll="section-vision">🏢 من نحن</a>
+  <a href="#section-clients" data-scroll="section-clients">🤝 عملاؤنا</a>
+  <a href="#section-cta" class="m-cta">📞 اتصل بنا</a>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+
+  <!-- Particles Canvas -->
+  <canvas id="particlesCanvas" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;opacity:0.6;"></canvas>
+
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-top-row">
+        <div class="hero-copy">
+          <div class="hero-eyebrow">
+            <span class="hero-eyebrow-dot"></span>
+            الشريك التقني الأول في المملكة
+          </div>
+
+          <div class="hero-type-line">
+            <span class="hero-type-static">خبراء في&nbsp;</span><span id="typewriter"></span>
+          </div>
+
+          <p class="hero-desc">
+            طريقك نحو مستقبل أكثر أمانًا وذكاءً<br>
+            نحوّل رؤيتك إلى واقع تقني متكامل.
+          </p>
+        </div>
+
+        <div class="hero-logo-block">
+          <img
+            src="netvaria-logo-transparent.png"
+            alt="نتفارية سيستم"
+            class="hero-logo-img"
+            onerror="this.style.display='none'"
+          >
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#section-services" class="btn-hero-primary" data-scroll="section-services">
+          استعرض خدماتنا
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#section-cta" class="btn-hero-secondary" data-scroll="section-cta">
+          احصل على استشارة مجانية
+        </a>
+      </div>
+
+      <div class="hero-product-slider" aria-label="حلول نتفارية">
+        <div class="hero-slide is-active">
+          <img src="assets/services/cctv.png" alt="كاميرات مراقبة ذكية">
+          <span>أنظمة مراقبة ذكية</span>
+        </div>
+        <div class="hero-slide">
+          <img src="assets/services/network.png" alt="شبكات وبنية تحتية">
+          <span>شبكات وبنية تحتية</span>
+        </div>
+        <div class="hero-slide">
+          <img src="assets/services/access-control.png" alt="أمن وتحكم بالوصول">
+          <span>أمن وتحكم بالوصول</span>
+        </div>
+        <div class="hero-slide">
+          <img src="assets/services/smart-home.png" alt="مباني ومنازل ذكية">
+          <span>مباني ومنازل ذكية</span>
+        </div>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat-item">
+          <div class="hero-stat-num"><span class="counter" data-target="100">0</span><span>+</span></div>
+          <div class="hero-stat-label">مشروع منجز</div>
+        </div>
+        <div class="hero-stat-item">
+          <div class="hero-stat-num"><span class="counter" data-target="15">0</span><span>+</span></div>
+          <div class="hero-stat-label">عميل حكومي وكبير</div>
+        </div>
+        <div class="hero-stat-item">
+          <div class="hero-stat-num">24<span>/7</span></div>
+          <div class="hero-stat-label">دعم فني متواصل</div>
+        </div>
+        <div class="hero-stat-item">
+          <div class="hero-stat-num"><span class="counter" data-target="5">0</span><span>+</span></div>
+          <div class="hero-stat-label">سنوات من التميز</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator">
+    <div class="scroll-mouse">
+      <div class="scroll-wheel"></div>
+    </div>
+    <span class="scroll-text">scroll</span>
+  </div>
+</section>
+
+<!-- ═══ SECTION 1 — WHITE — QUICK ACCESS ═══ -->
+<section id="section-quick">
+  <div class="section-quick-inner">
+    <span class="section-quick-label">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="#4a5568"><circle cx="12" cy="12" r="10"/></svg>
+      ابدأ من هنا
+    </span>
+    <h2 class="section-quick-title">كل ما تحتاجه في مكان واحد</h2>
+
+    <div class="quick-cards" data-aos="fade-up">
+      <!-- About -->
+      <div class="quick-card" onclick="document.getElementById('section-vision').scrollIntoView({behavior:'smooth'})">
+        <div class="quick-card-icon">🏢</div>
+        <div class="quick-card-title" style="color:#1a1a2e;">من نحن</div>
+        <div class="quick-card-desc">
+          تعرف على نتفارية سيستم، رؤيتنا، رسالتنا، وقصة نجاحنا في خدمة كبار العملاء في المملكة
+        </div>
+        <span class="quick-card-arrow">
+          اعرف أكثر
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </span>
+      </div>
+
+      <!-- Products -->
+      <div class="quick-card" onclick="window.open('https://netvaria.com/','_blank')">
+        <div class="quick-card-icon">🛒</div>
+        <div class="quick-card-title" style="color:#1a1a2e;">تصفح المنتجات</div>
+        <div class="quick-card-desc">
+          استعرض مجموعتنا الكاملة من الكاميرات والأنظمة الأمنية وحلول الشبكات والمنازل الذكية
+        </div>
+        <span class="quick-card-arrow">
+          تصفح الآن
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 2 — BLACK — SERVICES ═══ -->
+<section id="section-services">
+  <div class="services-bg-pattern"></div>
+  <div class="services-inner">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag tag-green">Our Services</span>
+      <h2 class="section-title-dark">أبرز ما نقدمه</h2>
+      <p class="section-desc-dark">حلول تقنية وأمنية متكاملة من التصميم حتى الدعم الفني المستمر</p>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- Service 1 -->
+      <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="service-image"><img src="assets/services/cctv.png" alt="أنظمة كاميرات المراقبة"></div>
+        <div class="service-card-num">01 — CCTV</div>
+        <div class="service-card-icon">📷</div>
+        <div class="service-card-title">أنظمة كاميرات المراقبة</div>
+        <div class="service-card-desc">
+          كاميرات متطورة بتقنيات الذكاء الاصطناعي، مراقبة 24/7، بث مباشر على الهاتف، وتركيب احترافي بتغطية كاملة للموقع.
+        </div>
+        <button class="service-card-link" onclick="document.getElementById('section-cta').scrollIntoView({behavior:'smooth'})">
+          اعرف المزيد
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="service-image"><img src="assets/services/network.png" alt="الشبكات وربط الفروع"></div>
+        <div class="service-card-num">02 — LAN & VPN</div>
+        <div class="service-card-icon">🌐</div>
+        <div class="service-card-title">الشبكات وربط الفروع</div>
+        <div class="service-card-desc">
+          بنية شبكية قوية تربط جميع الفروع بشكل سلس وآمن، مع Firewall متكامل، خط احتياطي تلقائي، وإدارة مركزية ذكية.
+        </div>
+        <button class="service-card-link" onclick="document.getElementById('section-cta').scrollIntoView({behavior:'smooth'})">
+          اعرف المزيد
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="service-image"><img src="assets/services/access-control.png" alt="التحكم في الدخول والإنتركم"></div>
+        <div class="service-card-num">03 — ACCESS CONTROL</div>
+        <div class="service-card-icon">🔐</div>
+        <div class="service-card-title">التحكم في الدخول والإنتركم</div>
+        <div class="service-card-desc">
+          أنظمة تحكم في الدخول بالبصمة والكارت والرمز السري، مع اتصال مرئي وصوتي للزوار وإدارة مركزية لصلاحيات الوصول.
+        </div>
+        <button class="service-card-link" onclick="document.getElementById('section-cta').scrollIntoView({behavior:'smooth'})">
+          اعرف المزيد
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="service-image"><img src="assets/services/ip-pbx.png" alt="الاتصال الداخلي وحضور الموظفين"></div>
+        <div class="service-card-num">04 — IP PBX</div>
+        <div class="service-card-icon">📞</div>
+        <div class="service-card-title">الاتصال الداخلي وحضور الموظفين</div>
+        <div class="service-card-desc">
+          سنترال IP يوحد اتصالات جميع الأقسام، مع أجهزة بصمة دقيقة للحضور والانصراف وتقارير تفصيلية للموارد البشرية.
+        </div>
+        <button class="service-card-link" onclick="document.getElementById('section-cta').scrollIntoView({behavior:'smooth'})">
+          اعرف المزيد
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="service-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="service-image"><img src="assets/services/smart-home.png" alt="المنازل والمباني الذكية"></div>
+        <div class="service-card-num">05 — SMART HOME</div>
+        <div class="service-card-icon">🏠</div>
+        <div class="service-card-title">المنازل والمباني الذكية</div>
+        <div class="service-card-desc">
+          تحكم ذكي بالإضاءة والمكيفات والستائر والأبواب عبر الجوال، مع سيناريوهات مخصصة لأقصى درجات الراحة والأمان.
+        </div>
+        <button class="service-card-link" onclick="document.getElementById('section-cta').scrollIntoView({behavior:'smooth'})">
+          اعرف المزيد
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- Service 6 — Free Support -->
+      <div class="service-card" style="border-color:rgba(0,200,83,0.15);background:rgba(0,200,83,0.04);" data-aos="fade-up" data-aos-delay="160">
+        <div class="service-image"><img src="assets/services/support.png" alt="الدعم الفني المجاني"></div>
+        <div class="service-card-num">06 — FREE SUPPORT</div>
+        <div class="service-card-icon">🆓</div>
+        <div class="service-card-title">الدعم الفني المجاني</div>
+        <div class="service-card-desc">
+          فريق دعم متخصص جاهز للمساعدة خلال ساعات العمل، مع مكتبة حلول سريعة لأكثر المشاكل شيوعًا بدون تكلفة.
+        </div>
+        <button class="service-card-link" onclick="document.getElementById('section-cta').scrollIntoView({behavior:'smooth'})">
+          احصل على دعم
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 3 — WHITE — VISION ═══ -->
+<section id="section-vision">
+  <div class="vision-inner">
+    <div data-aos="fade-up">
+      <span class="section-tag tag-dark">Vision & Mission</span>
+    </div>
+
+    <div class="vision-grid">
+      <!-- Left Text -->
+      <div class="vision-text-col" data-aos="fade-right">
+        <h2 class="vision-title-ar">
+          نُلهم التحول،<br>
+          ونُحقق <span>الأمان</span>
+        </h2>
+        <p class="vision-body">
+          نتفارية سيستم شركة سعودية متخصصة في تقديم حلول متكاملة في مجال الأنظمة الأمنية وتقنية المعلومات والبنية التحتية الرقمية. نمتلك فريقًا من المهندسين والمتخصصين المؤهلين الذين يعملون وفق أعلى معايير الجودة والاستقرار والأمان.
+        </p>
+        <p class="vision-body">
+          نفخر بشراكتنا مع كبرى المؤسسات الحكومية والشركات الوطنية، ونلتزم ببناء علاقات طويلة الأمد قائمة على الثقة والإتقان، مساهمين في تحقيق أهداف رؤية 2030.
+        </p>
+        <a href="#section-cta" class="btn-cta-primary" data-scroll="section-cta" style="width:fit-content;font-size:13px;padding:12px 26px;">
+          ابدأ الشراكة معنا
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Right Cards -->
+      <div class="vision-cards-col">
+        <div class="vision-card">
+          <div class="vision-card-icon">🎯</div>
+          <div class="vision-card-content">
+            <div class="vision-card-title">رؤيتنا</div>
+            <div class="vision-card-text">أن نكون الشريك التقني الأول في المملكة العربية السعودية، مساهمين في تحقيق أهداف رؤية 2030 من خلال حلول ذكية وآمنة تواكب مسيرة التحول الرقمي والمدن الذكية.</div>
+          </div>
+        </div>
+        <div class="vision-card">
+          <div class="vision-card-icon">🚀</div>
+          <div class="vision-card-content">
+            <div class="vision-card-title">رسالتنا</div>
+            <div class="vision-card-text">تقديم أنظمة تقنية وأمنية متكاملة بأعلى معايير الجودة والابتكار، مع دعم فني احترافي مستمر يضمن رضا عملائنا واستقرار بيئاتهم التقنية.</div>
+          </div>
+        </div>
+        <div class="vision-card">
+          <div class="vision-card-icon">🤝</div>
+          <div class="vision-card-content">
+            <div class="vision-card-title">شراكات طويلة الأمد</div>
+            <div class="vision-card-text">نبني الثقة مع عملائنا على المدى البعيد. شراكتنا لا تنتهي بالتسليم؛ نقدم دعمًا فنيًا متكاملاً وصيانة دورية تضمن استمرارية أعمالكم بكفاءة.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Advantages -->
+    <div class="vision-advantages" data-aos="fade-up">
+      <div class="adv-card">
+        <div class="adv-icon">🏆</div>
+        <div class="adv-title">جودة التنفيذ</div>
+        <div class="adv-desc">معايير عالمية في كل مرحلة من مراحل المشروع</div>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon">⚡</div>
+        <div class="adv-title">سرعة الإنجاز</div>
+        <div class="adv-desc">منهجيات Agile لتسليم المشاريع في أوقات قياسية</div>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon">🔬</div>
+        <div class="adv-title">أحدث التقنيات</div>
+        <div class="adv-desc">أدوات وتقنيات برمجية ناشئة لضمان الكفاءة</div>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon">🛡️</div>
+        <div class="adv-title">الاستقرار والأمان</div>
+        <div class="adv-desc">أقوى بروتوكولات الحماية والتشفير لبياناتكم</div>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon">🧩</div>
+        <div class="adv-title">مرونة الحلول</div>
+        <div class="adv-desc">حلول مخصصة وقابلة للتطوير لتناسب عملكم</div>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon">💡</div>
+        <div class="adv-title">الحلول الذكية</div>
+        <div class="adv-desc">دمج الذكاء الاصطناعي لميزة تنافسية حقيقية</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CLIENTS STRIP ═══ -->
+<section id="section-clients">
+  <div class="clients-header">
+    <p>ثقة كبار العملاء — شهادة على جودتنا</p>
+  </div>
+  <div class="clients-track-wrap">
+    <div class="clients-track">
+      <div class="clients-loop">
+        <span class="client-chip"><img src="assets/clients/client-02.png" alt="SDAIA">SDAIA — هيئة البيانات والذكاء الاصطناعي</span>
+        <span class="client-chip"><img src="assets/clients/client-03.png" alt="التحالف الإسلامي العسكري">التحالف الإسلامي العسكري</span>
+        <span class="client-chip"><img src="assets/clients/client-15.jpg" alt="نزاهة">نزاهة</span>
+        <span class="client-chip"><img src="assets/clients/client-04.png" alt="جامعة الأمير نواف">جامعة الأمير نواف</span>
+        <span class="client-chip"><img src="assets/clients/client-07.png" alt="مدينة الملك سعود الطبية">مدينة الملك سعود الطبية</span>
+        <span class="client-chip"><img src="assets/clients/client-11.png" alt="الشركة السعودية للكهرباء">الشركة السعودية للكهرباء</span>
+        <span class="client-chip"><img src="assets/clients/client-10.png" alt="Al-Jomaaiah Holding">Al-Jomaaiah Holding</span>
+        <span class="client-chip"><img src="assets/clients/client-12.png" alt="المياه الوطنية NWC">المياه الوطنية NWC</span>
+        <span class="client-chip"><img src="assets/clients/client-17.png" alt="Fitness Time">Fitness Time</span>
+        <span class="client-chip"><img src="assets/clients/client-16.png" alt="Rawafed Tech">Rawafed Tech</span>
+        <span class="client-chip"><img src="assets/clients/client-14.png" alt="Real Burger">Real Burger</span>
+      </div>
+      <div class="clients-loop" aria-hidden="true">
+        <span class="client-chip"><img src="assets/clients/client-02.png" alt="">SDAIA — هيئة البيانات والذكاء الاصطناعي</span>
+        <span class="client-chip"><img src="assets/clients/client-03.png" alt="">التحالف الإسلامي العسكري</span>
+        <span class="client-chip"><img src="assets/clients/client-15.jpg" alt="">نزاهة</span>
+        <span class="client-chip"><img src="assets/clients/client-04.png" alt="">جامعة الأمير نواف</span>
+        <span class="client-chip"><img src="assets/clients/client-07.png" alt="">مدينة الملك سعود الطبية</span>
+        <span class="client-chip"><img src="assets/clients/client-11.png" alt="">الشركة السعودية للكهرباء</span>
+        <span class="client-chip"><img src="assets/clients/client-10.png" alt="">Al-Jomaaiah Holding</span>
+        <span class="client-chip"><img src="assets/clients/client-12.png" alt="">المياه الوطنية NWC</span>
+        <span class="client-chip"><img src="assets/clients/client-17.png" alt="">Fitness Time</span>
+        <span class="client-chip"><img src="assets/clients/client-16.png" alt="">Rawafed Tech</span>
+        <span class="client-chip"><img src="assets/clients/client-14.png" alt="">Real Burger</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA SECTION ═══ -->
+<section id="section-cta">
+  <div class="cta-glow"></div>
+  <div class="cta-inner">
+    <span class="cta-eyebrow">ابدأ الآن</span>
+    <h2 class="cta-title-ar">ابدأ مشروعك اليوم</h2>
+    <p class="cta-desc">
+      نحن هنا لنحوّل رؤيتك إلى واقع تقني متكامل — تواصل معنا الآن للحصول على استشارة مجانية وعرض سعر فوري.
+    </p>
+    <div class="cta-actions">
+      <a href="https://wa.me/966533701650" target="_blank" class="btn-cta-primary">
+        💬 تواصل عبر واتساب
+      </a>
+      <a href="mailto:info@netvaria.com" class="btn-cta-outline">
+        📧 أرسل استفسارك
+      </a>
+    </div>
+
+    <!-- Contact Info -->
+    <div style="margin-top:48px; padding-top:40px; border-top:1px solid rgba(255,255,255,0.07); display:flex; gap:40px; justify-content:center; flex-wrap:wrap;">
+      <div style="text-align:center;">
+        <div style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">هاتف وواتساب</div>
+        <a href="tel:+966533701650" dir="ltr" style="font-size:17px;font-weight:700;color:#00c853;text-decoration:none;font-family:'Poppins',sans-serif;display:inline-block;">+966533701650</a>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">البريد الإلكتروني</div>
+        <a href="mailto:info@netvaria.com" style="font-size:17px;font-weight:700;color:#00c853;text-decoration:none;font-family:'Poppins',sans-serif;">info@netvaria.com</a>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">ساعات العمل</div>
+        <div style="font-size:15px;font-weight:600;color:rgba(255,255,255,0.7);font-family:'Cairo',sans-serif;">السبت – الخميس | 9ص – 9م</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <img
+            src="netvaria-logo-transparent.png"
+            alt="نتفارية سيستم"
+            onerror="this.style.display='none'"
+          >
+        </div>
+        <p class="footer-brand-desc">
+          شركاؤكم في التحول الرقمي والأمن التقني — حلول متكاملة من التصميم حتى الدعم الفني المستمر.
+        </p>
+        <div class="footer-socials">
+          <a href="https://wa.me/966533701650" target="_blank" class="footer-social" title="واتساب">💬</a>
+          <a href="mailto:info@netvaria.com" class="footer-social" title="إيميل">📧</a>
+          <a href="https://netvaria.com" target="_blank" class="footer-social" title="الموقع">🌐</a>
+        </div>
+      </div>
+
+      <!-- Links 1 -->
+      <div>
+        <div class="footer-col-title">الخدمات</div>
+        <div class="footer-col-links">
+          <button onclick="document.getElementById('section-services').scrollIntoView({behavior:'smooth'})">كاميرات المراقبة</button>
+          <button onclick="document.getElementById('section-services').scrollIntoView({behavior:'smooth'})">الشبكات وربط الفروع</button>
+          <button onclick="document.getElementById('section-services').scrollIntoView({behavior:'smooth'})">التحكم في الدخول</button>
+          <button onclick="document.getElementById('section-services').scrollIntoView({behavior:'smooth'})">السنترال الداخلي</button>
+          <button onclick="document.getElementById('section-services').scrollIntoView({behavior:'smooth'})">المنازل الذكية</button>
+        </div>
+      </div>
+
+      <!-- Links 2 -->
+      <div>
+        <div class="footer-col-title">الشركة</div>
+        <div class="footer-col-links">
+          <button onclick="document.getElementById('section-vision').scrollIntoView({behavior:'smooth'})">من نحن</button>
+          <button onclick="document.getElementById('section-clients').scrollIntoView({behavior:'smooth'})">عملاؤنا</button>
+          <button onclick="document.getElementById('section-vision').scrollIntoView({behavior:'smooth'})">رؤيتنا ورسالتنا</button>
+          <button onclick="document.getElementById('section-cta').scrollIntoView({behavior:'smooth'})">الدعم الفني</button>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <div class="footer-col-title">تواصل معنا</div>
+        <div class="footer-col-links">
+          <a href="mailto:info@netvaria.com">info@netvaria.com</a>
+          <a href="tel:+966533701650" dir="ltr" style="display:inline-block;">+966533701650</a>
+          <a href="https://netvaria.com" target="_blank">www.netvaria.com</a>
+          <span style="font-size:14px;color:rgba(255,255,255,0.3);">السبت – الخميس</span>
+          <span style="font-size:14px;color:rgba(255,255,255,0.3);">9:00 ص – 9:00 م</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">
+        © 2025 <span>نتفارية سيستم</span> — جميع الحقوق محفوظة
+      </p>
+      <div class="footer-bottom-links">
+        <a href="https://netvaria.com" target="_blank">www.netvaria.com</a>
+        <a href="mailto:info@netvaria.com">info@netvaria.com</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ SCRIPTS ═══ -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  // Register GSAP ScrollTrigger
+  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+  }
+</script>
+<script src="script.js"></script>
+
+<!-- Smooth scroll for all data-scroll elements -->
+<script>
+document.querySelectorAll('[data-scroll]').forEach(el => {
+  el.addEventListener('click', e => {
+    const id = el.getAttribute('data-scroll');
+    const target = document.getElementById(id);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
